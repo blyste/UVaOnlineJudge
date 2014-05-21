@@ -73,7 +73,7 @@ int main() {
     }
     // Use dijkstra to find the minimum time for each cell.
     // Return the nomber of mice allowed to escape.
-    cout << escape(graph, n, e, t) << endl;
+    cout << escape(graph, n, e - 1, t) << endl;
     if (i != nb-1)
       cout << endl;
   }
