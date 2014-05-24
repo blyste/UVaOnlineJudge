@@ -64,7 +64,7 @@ int main() {
   // For each test case, find the result.
   for (int i = 0; i < nb; i++) {
     // Reset the adjacency matrix.
-    memset(graph, -1, MAZE_WIDTH * MAZE_WIDTH);
+    memset(graph, -1, MAZE_WIDTH * MAZE_WIDTH * sizeof(int));
     cin >> n >> e >> t >> connections;
     // Fill the adjacency matrix.
     for (int j = 0; j < connections; j++) {
