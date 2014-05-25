@@ -7,7 +7,7 @@ using namespace std;
 static void water_level(void) {
   vector<pair<float, float>> citerns;
   float min_level, height, width, depth;
-  float volume_left, level, sub_level;
+  float volume_left, level, surface, sub_level;
   int citerns_nb;
   cin >> citerns_nb;
   while (citerns_nb--) {
@@ -18,19 +18,22 @@ static void water_level(void) {
   cin >> volume_left;
   sort(citerns.begin(), citerns.end());
   level = 0;
+  surface = 0;
   for (pair<float, float> item: citerns) {
-    if (item.second == 0) {
+    if (surface == 0) {
       level = item.first;
+      surface += item.second;
       continue;
     }
-    sub_level = volume_left / item.second;
-    if (sub_level < (item.first - level)) {
-      cout << level + sub_level;
+    sub_level = volume_left / surface;
+    if (sub_level <= (item.first - level)) {
+      printf("%.2f\r\n", level + sub_level);
       return;
     }
     else {
-      volume_left -= item.second * (item.first - level);
+      volume_left -= surface * (item.first - level);
       level = item.first;
+      surface += item.second;
     }
   }
   cout << "OVERFLOW" << endl;
