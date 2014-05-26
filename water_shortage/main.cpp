@@ -27,7 +27,7 @@ static void water_level(void) {
     }
     sub_level = volume_left / surface;
     if (sub_level <= (item.first - level)) {
-      printf("%.2f\r\n", level + sub_level);
+      printf("%.2f\n", level + sub_level);
       return;
     }
     else {
