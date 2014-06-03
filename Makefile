@@ -9,8 +9,9 @@ MICE_PATH 			:= mice_maze/
 GOLDBACH_PATH		:= goldbach_conjecture/
 MAYA_PATH 			:= maya_calendar/
 WATER_PATH			:= water_shortage/
+X_NETWORK				:= X_network/
 
-all: no_change lawn_mower mice goldbach maya water
+all: no_change lawn_mower mice goldbach maya water x_network
 
 no_change: $(NOCHANGE_PATH)$(OUTPUT)
 
@@ -23,6 +24,8 @@ goldbach: $(GOLDBACH_PATH)$(OUTPUT)
 maya: $(MAYA_PATH)$(OUTPUT)
 
 water: $(WATER_PATH)$(OUTPUT)
+
+x_network: $(X_NETWORK)$(OUTPUT)
 
 .PHONY: clean all
 
