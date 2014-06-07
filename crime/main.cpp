@@ -37,7 +37,7 @@ void PPPS(int n, int m) {
       count[parent[a]] += 1;
     }
     // Tables are already filled for a and b.
-    // If neighbour a == b, nothing to do.
+    // If neighbour[a] == parent[b], nothing to do.
     // Else, check if there is a conflict or if it is an "union" of two graphs.
     else if (neighbour[a] != parent[b]) {
       if (parent[a] == parent[b]) {
