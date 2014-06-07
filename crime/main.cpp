@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#define N_MAX   1000
+#define N_MAX   1001
 
 void PPPS(int n, int m) {
   int parent[N_MAX] = {0};
