@@ -11,8 +11,10 @@ MAYA_PATH 			:= maya_calendar/
 WATER_PATH			:= water_shortage/
 X_NETWORK				:= X_network/
 CRIME 					:= crime/
+ROOF						:= roof/
+ONES						:= ones/
 
-all: no_change lawn_mower mice goldbach maya water x_network crime
+all: no_change lawn_mower mice goldbach maya water x_network crime ones
 
 no_change: $(NOCHANGE_PATH)$(OUTPUT)
 
@@ -29,6 +31,10 @@ water: $(WATER_PATH)$(OUTPUT)
 x_network: $(X_NETWORK)$(OUTPUT)
 
 crime: $(CRIME)$(OUTPUT)
+
+roof: $(ROOF)$(OUTPUT)
+
+ones: $(ONES)$(OUTPUT)
 
 .PHONY: clean all
 
