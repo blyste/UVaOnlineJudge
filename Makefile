@@ -13,8 +13,9 @@ X_NETWORK				:= X_network/
 CRIME 					:= crime/
 ONES						:= ones/
 BUY							:= buy/
+BALLOONS				:= balloons/
 
-all: no_change lawn_mower mice goldbach maya water x_network crime ones buy
+all: no_change lawn_mower mice goldbach maya water x_network crime ones buy balloons
 
 no_change: $(NOCHANGE_PATH)$(OUTPUT)
 
@@ -35,6 +36,8 @@ crime: $(CRIME)$(OUTPUT)
 ones: $(ONES)$(OUTPUT)
 
 buy: $(BUY)$(OUTPUT)
+
+balloons: $(BALLOONS)$(OUTPUT)
 
 .PHONY: clean all
 
