@@ -15,8 +15,9 @@ ONES						:= ones/
 BUY							:= buy/
 CONTAINERS			:= containers/
 BALLOONS				:= balloons/
+WATER_FALLS			:= water_falls/
 
-all: no_change lawn_mower mice goldbach maya water x_network crime ones buy containers balloons
+all: no_change lawn_mower mice goldbach maya water x_network crime ones buy containers balloons water_falls
 
 no_change: $(NOCHANGE_PATH)$(OUTPUT)
 
@@ -41,6 +42,8 @@ buy: $(BUY)$(OUTPUT)
 containers: $(CONTAINERS)$(OUTPUT)
 
 balloons: $(BALLOONS)$(OUTPUT)
+
+water_falls: $(WATER_FALLS)$(OUTPUT)
 
 .PHONY: clean all
 
