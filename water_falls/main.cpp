@@ -14,7 +14,6 @@ int main()
   vector<pair<pair<int, int>, pair<int, int>>> roofs;
   vector<pair<int, int>> sources;
   int x1, x2, y1, y2;
-  int c;
 
   cin >> testcases;
   for (test = 0; test < testcases; test++) {
@@ -41,7 +40,6 @@ int main()
       sources.push_back(make_pair(x1, y1));
     }
 
-    c = 0;
     // Get solution for each drop.
     for (pair<int, int> s: sources) {
       // (x, y) coordinates of the drop
@@ -86,10 +84,10 @@ int main()
         }
       }
       cout << x <<endl;
-      if (c++ != NS - 1 || test != testcases - 1)
-        cout << endl;
     }
 
+    if (test != testcases - 1)
+      cout << endl;
   }
   return 0;
 }
